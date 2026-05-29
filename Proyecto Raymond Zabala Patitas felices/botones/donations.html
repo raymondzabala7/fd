@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Donación</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <nav class="menu">
+        <ul>
+        <li><a href="/index.html">Inicio</a></li>
+        <li><a href="adopt.html">Adopta</a></li>
+        <li><a href="gallery.html">Galería</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+        <li><a href="donations.html">Donaciones</a></li>
+        </ul>
+        </nav>
+        
+    <div class="donation-container">
+        <div class="donation-header">
+            <h2>Apoya nuestra causa</h2>
+            <p>Tu contribución hace una gran diferencia. ¡Dona hoy!</p>
+        </div>
+        
+        <form action="#" method="POST">
+
+            <div class="custom-amount">
+                <label for="amount">Monto deseado para donar ($):</label>
+                <input type="number" id="amount" name="amount" placeholder="Ej. 50" min="1">
+            </div>
+
+            <div class="donor-details">
+                <div class="form-group">
+                    <label for="name">Nombre completo</label>
+                    <input type="text" id="name" name="name" required placeholder="Tu nombre">
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Donar ahora</button>
+        </form>
+    </div>
+
+    <script>
+        function setAmount(value) {
+            const buttons = document.querySelectorAll('.amount-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            document.getElementById('amount').value = value;
+        }
+    </script>
+</body>
+<section>
+    <footer>
+      <p>Patitas Felices © 2026</p>
+      <p>patitasfelicescol@gmail.com</p>
+      <p>https://app.raymondz.net/login</p>
+    </footer>
+    </section>
+</html>
